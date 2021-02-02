@@ -1,0 +1,97 @@
+.sh-aside {
+  &__image {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    img {
+      border-radius: @bdrad-theme;
+    }
+  }
+  .sh-section__footer {
+    .sh-btn-icon {
+      margin-right: 25px;
+      i {
+        font-size: 18px;
+      }
+    }
+    .sh-section__btn-repost {
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+  &__edit-post {
+    margin-top: 44px;
+    flex-direction: column;
+    .display-flex();
+    & > div {
+      flex-wrap: wrap;
+      align-items: center;
+      .display-flex();
+    }
+    &-head {
+      border-bottom: solid 1px @c-border--dark;
+    }
+    &-footer {
+      padding-top: 22px;
+      & > span,
+      & > label {
+        &:not(:last-child) {
+          margin-right: 30px;
+          margin-bottom: 10px;
+        }
+      }
+      .sh-btn {
+        margin-top: 16px;
+        background-color: transparent;
+        color: @c-red;
+        border-color: @c-red;
+        i {
+          font-size: @font-size--lg;
+          color: @c-red;
+        }
+        &:hover {
+          color: @c-white;
+          background-color: @c-red;
+          i {
+            color: @c-white;
+          }
+        }
+      }
+    }
+  }
+  .sh-btn {
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    border-width: 1px;
+  }
+  .sh-checkbox {
+    margin-bottom: 30px;
+  }
+  select.form-control {
+    margin-bottom: 30px;
+    max-width: 200px;
+    margin-right: 30px;
+  }
+  &__btn {
+
+  }
+  &__get-code {
+    padding-top: 22px;
+    flex-direction: column;
+    align-items: flex-start !important;
+    p {
+      margin-bottom: 12px;
+    }
+    .sh-input-copy {
+      margin-bottom: 22px;
+    }
+  }
+  &__social {
+    padding-bottom: 22.5px;
+    border-bottom: solid 1px @c-border--dark;
+  }
+  .sh-btn-social {
+    margin: 7.5px;
+  }
+}

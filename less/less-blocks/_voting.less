@@ -1,0 +1,58 @@
+.sh-voting {
+  &__range {
+    position: relative;
+    height: 34px;
+    border-radius: @bdrad-theme;
+    background-color: #e6e9f1;
+    overflow: hidden;
+    & > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #8db5e9;
+    }
+    & > p {
+      position: absolute;
+      top: 6px;
+      left: 12px;
+      font-weight: @fw--light;
+    }
+  }
+  label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    &:not(:first-child) {
+      margin-top: 16px
+    }
+    span {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 8px;
+      margin-right: 14px;
+      border: solid 1px #9fa3ac;
+      border-radius: 50%;
+      cursor: pointer;
+      .square(16px);
+      .opacity(0.5);
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        border-radius: 50%;
+        background-color: #63616b;
+        ._center-block-abs();
+        .square(8px);
+      }
+    }
+    input {
+      display: none;
+      &:checked + span {
+        .opacity(1);
+      }
+    }
+  }
+}

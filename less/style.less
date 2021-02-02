@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:		Sharehub
+Version:		1.1
+Last change:	27/04/17
+Assigned to:	ecommers
+Primary use:	Blog
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Layout]
+
+* body
+	1. Header / .sh-header
+		1.1. Logo / .sh-logo
+		1.2. Dropdown Menu / .sh-header__dropdown
+		1.3. Menu / .sh-header__menu
+		1.4. Search / .sh-header__search
+		1.5. Control / .sh-header__control
+		1.6. User / .sh-user
+		1.7. Upload Popup / .sh-upload
+	2. Content / main
+	    2.1. Content Header / .sh-content-head
+	        - Navigation / .sh-content-head__navigation
+	        - Calendar / .sh-content-head__btn-calendar
+            - Control Buttons / .sh-content-head__control
+            - Popularity Dropdown / .sh-content-head__popularity-content
+            - Buttons Block / .sh-content-head__btns
+	    2.2. User Header / .sh-head-user
+	    2.3. Section / .sh-section
+	        - Section Header / .sh-section__head
+	        - Section Content / .sh-section__content
+	        - Section Footer / .sh-section__footer
+	        - Section Statistic / .sh-statistic
+	        - Section Feeling / .sh-section__feeling
+	        - Section Video / .sh-section__media
+	        - Section Edit Post / .sh-section.sh-section__edit-post
+	    2.4. Add Comment / .sh-add-comment
+	    2.5. Comments / .sh-comments
+	        - / .sh-comments__head
+	        - / .sh-comments__section
+	    2.6. Login / .sh-login
+	        - Logo / .sh-login__logo
+	        - Login Content / .sh-login__content
+	    2.7. Login, Signup / .sh-login
+	        - Logo / .sh-login__logo
+	        - Login Content, Signup Content / .sh-login__content
+	        - Social Icons / .sh-login__social
+	3. Sidebar / .sh-aside
+	    3.3. Sidebar Image / .sh-aside__image
+	    3.1. Sidebar Edit Post / .sh-aside.sh-aside__edit-post
+	        - Social Icons / .sh-aside__social
+	4. Footer / footer
+	    4.1. Load More Posts Button / .sh-footer__more-btn
+	    4.2. Load More Images Button / .sh-footer__btn-add-image
+
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+
+Background:				#eef3f6
+Content:				#ffffff
+Main color: 			#3482e2
+Icons color:	        #a1a5ae
+
+a (standard):			#3482e2
+a (hover):				#3482e2
+a (visited):			#3482e2
+a (active):				#3482e2
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Typography]
+
+Body copy:			16px 'Signika', sans-serif;
+Input, textarea:	16px 'Signika', sans-serif;
+
+-------------------------------------------------------------------*/
+
+//bootstrap
+@import '../vendor/bootstrap/v3/less/bootstrap.less';
+@import '../vendor/bootstrap/v4/css/bootstrap-grid.css';
+
+//general
+@import "general/_mixin.less";
+@import "general/_variables.less";
+@import "general/_modifiers.less";
+@import "general/_typography.less";
+@import "general/_animation.less";
+
+//plugins
+@import "less-blocks/_magnific-popup.less";
+
+//components
+@import "less-blocks/_input.less";
+@import "less-blocks/_button.less";
+@import "less-blocks/_logo.less";
+@import "less-blocks/_avatar.less";
+@import "less-blocks/_media.less";
+@import "less-blocks/_rating.less";
+@import "less-blocks/_progress.less";
+@import "less-blocks/_offer.less";
+
+//blocks
+@import "less-blocks/_voting.less";
+@import "less-blocks/_compare.less";
+@import "less-blocks/_content-head.less";
+@import "less-blocks/_section.less";
+@import "less-blocks/_comment.less";
+@import "less-blocks/_aside.less";
+@import "less-blocks/_head-user.less";
+@import "less-blocks/_login.less";
+@import "less-blocks/_upload.less";
+@import "less-blocks/_user.less";
+@import "less-blocks/_statistic";
+@import "less-blocks/_calendar.less";
+@import "less-blocks/_feelling.less";
+
+@import "less-blocks/_header.less";
+@import "less-blocks/_footer.less";
+
+//pages
+
+body {
+  //display: none;
+}
+

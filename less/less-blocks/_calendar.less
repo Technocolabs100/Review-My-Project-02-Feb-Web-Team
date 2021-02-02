@@ -1,0 +1,192 @@
+.sh-calendar {
+  display: none;
+  width: 500px;
+  padding: 0 30px;
+  background-color: @c-white;
+  border-radius: @bdrad-theme;
+  color: @c-text--main;
+  cursor: default;
+  z-index: 100000;
+  .box-shadow(0px 2px 6px -2px rgba(0, 0, 0, 0.1));
+  @media only screen and (min-width: @screen-mob-sm) {
+    top: -30px;
+    left: -30px;
+    position: absolute;
+  }
+  @media only screen and (max-width: @screen-sm) {
+    max-width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+  }
+  &__head {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: solid 1px #f3f3f3;
+    align-items: center;
+    justify-content: space-between;
+    .display-flex();
+    @media only screen and (min-width: @screen-mob-sm) {
+      padding-left: 50px;
+    }
+    span {
+      font-weight: @fw--semi-bold;
+    }
+    p {
+      color: @c-text--light;
+    }
+  }
+  &__close {
+    cursor: pointer;
+  }
+  &__content {
+
+  }
+  &__datepicker {
+    .datepicker {
+      width: 100% !important;
+      font-family: @font-family;
+      font-size: @font-size--lg;
+      font-weight: @fw--light;
+      tr,
+      td {
+        display: inline-block;
+      }
+      table,
+      tbody,
+      thead {
+        display: block;
+        max-width: 100%;
+      }
+      .datepickerContainer {
+        width: 100% !important;
+        height: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        background-color: @c-white !important;
+        & > table > tbody {
+          & > tr,
+          & > tr > td {
+            display: block;
+            max-width: 100%;
+          }
+        }
+      }
+      .datepickerBorderT,
+      .datepickerBorderB,
+      .datepickerBorderL,
+      .datepickerBorderR,
+      .datepickerBorderTL,
+      .datepickerBorderTR,
+      .datepickerBorderBL,
+      .datepickerBorderBR {
+        display: none;
+      }
+      .datepickerDoW,
+      .datepickerDays{
+        th {
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+      td a,
+      .datepickerDoW th span {
+        max-width: 62px;
+        height: 44px;
+        ._flex-center();
+        .display-flex();
+      }
+      .datepickerMonth {
+        a {
+          max-width: inherit !important;
+        }
+      }
+      .datepickerDays,
+      .datepickerMonths,
+      .datepickerYears {
+        padding: 0 20px;
+        margin-bottom: 12px;
+        text-align: center;
+        tr {
+          justify-content: space-between;
+          .display-flex();
+        }
+        a {
+          span {
+            color: #63616b;
+            cursor: pointer;
+          }
+        }
+        .datepickerNotInMonth {
+          a span {
+            color: #d7dbe5;
+          }
+        }
+      }
+      .datepickerMonths,
+      .datepickerYears {
+        margin-top: 12px;
+      }
+      .datepickerDoW {
+        padding: 0 20px;
+        margin-top: 12px !important;
+        justify-content: space-between;
+        .display-flex();
+        span {
+          color: #9fa3ac;
+        }
+      }
+      td.datepickerSelected {
+        background-color: transparent !important;
+      }
+      thead {
+        display: block;
+        tr {
+          &:first-child {
+            padding: 0 20px;
+            border-bottom: solid 1px #f3f3f3;
+            justify-content: space-between;
+            align-items: center;
+            .display-flex();
+            th {
+              a {
+                width: inherit;
+                span {
+                  color: @c-text--main;
+                  cursor: pointer;
+                  &:hover {
+                    color: @c-theme--main;
+                  }
+                }
+              }
+              &:first-child,
+              &:last-child {
+                a span {
+                  color: @c-text--light;
+                }
+              }
+            }
+          }
+        }
+      }
+      table.datepickerViewMonths tbody.datepickerDays,
+      table.datepickerViewMonths tbody.datepickerYears,
+      table.datepickerViewMonths tr.datepickerDoW,
+      table.datepickerViewYears tbody.datepickerDays,
+      table.datepickerViewYears tbody.datepickerMonths,
+      table.datepickerViewYears tr.datepickerDoW {
+        display: none;
+      }
+    }
+  }
+  &__footer {
+    padding: 22px 0;
+    border-top: solid 1px #f3f3f3;
+    align-items: center;
+    justify-content: center;
+    .display-flex();
+
+  }
+}

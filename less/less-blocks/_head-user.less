@@ -1,0 +1,102 @@
+.sh-head-user {
+  border-bottom: solid 1px #e6e9f1;
+  &__content {
+    max-width: 740px;
+    padding: 35px 15px;
+    margin: 0 auto;
+    ._flex-center();
+    .display-flex();
+    @media only screen and (max-width: @screen-sm) {
+      flex-wrap: wrap;
+      //justify-content: flex-start;
+    }
+  }
+  &__image {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 172px;
+    min-width: 172px;
+    border-radius: 50%;
+    overflow: hidden;
+    @media only screen and (min-width: @screen-mob-sm) {
+      margin-right: 46px;
+    }
+  }
+  &__info {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    &-head {
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      .display-flex();
+    }
+    &-statistic {
+      margin-bottom: 16px;
+      .sh-btn-icon {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 30px;
+        i {
+          margin-right: 15px;
+          color: #9fa3ac;
+        }
+        span {
+          color: @c-text--main;
+          font-weight: @fw--semi-bold;
+        }
+      }
+    }
+    & > p {
+      color: #63616b;
+    }
+  }
+  &__name {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 30px;
+    font-size: 24px;
+    span {
+      margin-right: 15px;
+    }
+    i {
+      img {
+        width: 16px;
+      }
+    }
+  }
+  &__icons {
+    margin-right: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    i {
+      img {
+        width: 34px;
+      }
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+  &__btn {
+    &-follow {
+      margin-right: 30px;
+      background-color: transparent;
+      border-width: 1px;
+      border-radius: 20px;
+      padding-left: 14px;
+      padding-right: 14px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      ._link-color(@c-theme--main);
+      &:hover {
+        color: @c-white;
+        background-color: @c-theme--main;
+      }
+    }
+    &-options {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

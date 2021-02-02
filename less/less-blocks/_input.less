@@ -1,0 +1,112 @@
+input.form-control {
+  height: 40px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: @fw--light;
+  font-size: @font-size;
+  .box-shadow(none) !important;
+  &:focus {
+    border-color: @c-theme--main;
+  }
+  &::-webkit-input-placeholder {
+    color: @c-text--main;
+    font-weight: @fw--light;
+    font-size: @font-size;
+  }
+  &::-moz-placeholder {
+    color: @c-text--main;
+    font-weight: @fw--light;
+    font-size: @font-size;
+  }
+  &:-ms-input-placeholder {
+    color: @c-text--main;
+    font-weight: @fw--light;
+    font-size: @font-size;
+  }
+  &:-moz-placeholder {
+    color: @c-text--main;
+    font-weight: @fw--light;
+    font-size: @font-size;
+  }
+}
+
+.ttg-border-none.form-control {
+  padding: 0;
+  padding-right: 26px;
+  &,
+  &:focus {
+    border: none;
+    outline: none;
+    .box-shadow(none);
+  }
+}
+
+select.form-control {
+  display: inline-block;
+  .box-shadow(none) !important;
+  &:focus {
+    border-color: @c-theme--main;
+  }
+}
+
+.sh-checkbox {
+  align-items: center;
+  .display-inline-flex();
+  span {
+    position: relative;
+    display: inline-block;
+    border: solid 1px @c-gray;
+    border-radius: @bdrad-theme;
+    cursor: pointer;
+    .square(22px);
+  }
+  input {
+    display: none;
+    &:checked + span {
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 8px;
+        height: 12px;
+        top: 50%;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -8px;
+        border-right: solid 2px @c-gray-dark;
+        border-bottom: solid 2px @c-gray-dark;
+        .rotate(45deg);
+      }
+    }
+  }
+  p {
+    display: inline;
+    margin-left: 15px;
+    font-weight: @fw--light;
+  }
+}
+
+.sh-input-copy {
+  position: relative;
+  width: 100%;
+  input {
+    border-radius: @bdrad-theme;
+  }
+  a {
+    position: absolute;
+    display: block;
+    min-width: 64px;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    background-color: @c-gray;
+    color: @c-white;
+    border-radius: @bdrad-theme;
+    ._flex-center();
+    .display-flex();
+    .transition(@animation-duration);
+    &:hover {
+      .opacity(0.7);
+    }
+  }
+}

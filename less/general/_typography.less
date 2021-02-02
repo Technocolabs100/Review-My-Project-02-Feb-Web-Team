@@ -1,0 +1,76 @@
+body {
+  font-family: @font-family;
+  background-color: @c-bg--body;
+  font-size: @font-size;
+  color: @c-text--main;
+  line-height: @line-height;
+  font-weight: @fw--light;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @c-text--h;
+  font-family: @font-family;
+  font-weight: @fw--light;
+  margin: 0;
+}
+h1 {
+  font-size: @fs--h1;
+  line-height: @lh--h1;
+}
+h2 {
+  font-size: @fs--h2;
+  line-height: @lh--h2;
+}
+h3 {
+  font-size: @fs--h3;
+  line-height: @lh--h3;
+}
+h4 {
+  font-size: @fs--h4;
+  line-height: @lh--h4;
+}
+h5 {
+  font-size: @fs--h5;
+  line-height: @lh--h5;
+}
+h6 {
+  font-size: @fs--h6;
+  line-height: @lh--h6;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  image-rendering: auto;
+}
+
+a {
+  color: @c-theme--main;
+  &:hover,
+  &:visited,
+  &:active,
+  &:link {
+    color: @c-theme--main;
+    text-decoration: none;
+  }
+}
+
+ul {
+  ._list-style-off();
+}
+
+label {
+  margin: 0;
+}
+
+[class^="icon-"] {
+  color: @c-icon-default;
+  font-size: @font-size;
+}

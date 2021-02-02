@@ -1,0 +1,91 @@
+.sh-compare {
+  &__images {
+    position: relative;
+    margin: 0 -5px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      display: block;
+      width: 32px;
+      content: 'vs';
+      top: 50%;
+      left: 50%;
+      margin-left: -16px;
+      margin-top: -9px;
+      background-color: #d62162;
+      color: @c-white;
+      font-weight: @fw--bold;
+      font-size: @font-size--sm;
+      text-transform: uppercase;
+      border-radius: calc(@bdrad-theme~' * 0.6');
+      text-align: center;
+    }
+    & > div {
+      display: block;
+      float: left;
+      width: 50%;
+      padding: 0 5px;
+      img {
+        border-radius: calc(@bdrad-theme~' * 1.4');
+      }
+    }
+  }
+  span {
+    color: #63616b;
+    display: block;
+  }
+  &__price {
+    font-weight: @fw--semi-bold;
+    font-size: @font-size--lg;
+    color: @c-text--main !important;
+  }
+  &__left {
+    @media only screen and (min-width: @screen-mob-xs) {
+      text-align: right;
+    }
+  }
+  &__right {
+
+  }
+  &__center {
+    text-align: center;
+  }
+  &__architecture {
+    margin: 22px 0 18px;
+    padding: 10px 0;
+    text-align: center;
+    border-top: solid 1px @c-border;
+    border-bottom: solid 1px @c-border;
+    i {
+      display: inline-block;
+      width: 0;
+      margin-left: 8px;
+      margin-top: 4px;
+      border: solid 5px transparent;
+      border-top-color: #63616b;
+      vertical-align: middle;
+    }
+  }
+  &__section {
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  &__progress {
+    &-green,
+    &-red {
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    &-green {
+      border-bottom: solid 2px #3cb878;
+    }
+    &-red {
+      border-bottom: solid 2px #e25c5c;
+    }
+  }
+}

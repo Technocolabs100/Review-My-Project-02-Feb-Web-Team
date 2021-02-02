@@ -1,0 +1,68 @@
+@animation-qv-in: 500ms;
+@animation-qv-uot: 300ms;
+
+//with-zoom
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  .opacity(0);
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all @animation-qv-in ease-out;
+  -moz-transition: all @animation-qv-in ease-out;
+  -o-transition: all @animation-qv-in ease-out;
+  transition: all @animation-qv-in ease-out;
+}
+.mfp-with-zoom .mfp-container {
+  .scale(0.6);
+}
+.mfp-with-zoom.mfp-ready .mfp-container {
+  .opacity(1);
+  .scale(1);
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  .opacity(0.4);
+}
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  .opacity(0);
+  -webkit-transition: all @animation-qv-uot ease-out;
+  -moz-transition: all @animation-qv-uot ease-out;
+  -o-transition: all @animation-qv-uot ease-out;
+  transition: all @animation-qv-uot ease-out;
+}
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  .opacity(0);
+}
+.mfp-with-zoom.mfp-removing .mfp-container, {
+  .scale(0.6);
+}
+
+//custom
+.mfp-bg,
+.mfp-wrap {
+  .mfp-close {
+    margin-top: 14px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: @c-icon-default;
+    @media only screen and (min-width: @screen-mob-sm) {
+      .square(56px);
+    }
+  }
+  .sh-upload {
+    display: block;
+  }
+}
+
+.mfp-bg {
+  z-index: 1000000;
+  &.sh-avatar__bg,
+  &.sh-calend__bg,
+  &.sh-statistic__bg{
+    z-index: 10000;
+  }
+}
+
+.mfp-wrap {
+  z-index: 1000000 !important;
+}

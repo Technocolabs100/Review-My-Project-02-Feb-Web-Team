@@ -1,0 +1,105 @@
+.sh-add-comment {
+  padding: 26px 30px;
+  margin-bottom: 30px;
+  background-color: @c-white;
+  border-radius: @bdrad-theme;
+  .box-shadow(0px 2px 6px -2px rgba(0, 0, 0, 0.1));
+  & > span {
+
+  }
+  form {
+    input.form-control {
+      padding: 0;
+    }
+  }
+  &__content {
+    margin-top: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    .display-flex();
+    & > span {
+      color: @c-text--light;
+    }
+  }
+  &__btn {
+    &-addimg {
+      margin-right: 15px;
+    }
+    &-save {
+      margin-left: auto;
+      span {
+        margin-right: 15px;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.sh-comments {
+  margin-bottom: 30px;
+  &__head {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #e6e9f1;
+    flex-wrap: wrap;
+    .display-flex();
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: @font-size--lg;
+    font-weight: @fw--semi-bold;
+  }
+  &__options {
+    margin-left: auto;
+    align-items: center;
+    .display-flex();
+    span {
+      margin-right: 30px;
+    }
+    .sh-btn-icon:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__section {
+    margin-top: 30px;
+    .display-flex();
+    p {
+      margin-top: 15px;
+    }
+  }
+  &__avatar {
+    margin-right: 30px;
+  }
+  &__content {
+    width: 100%;
+    & > a > img {
+      max-width: 266px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  &__name {
+    white-space: pre;
+    font-weight: @fw--semi-bold;
+    ._link-color(@c-text--main);
+  }
+  &__passed {
+    color: @c-gray;
+  }
+  &__info {
+    margin-top: 5px;
+    .sh-btn-icon {
+      margin-right: 30px;
+      margin-top: 10px;
+      span {
+        margin-left: 15px;
+      }
+    }
+  }
+  &__btn {
+    &-reply {
+      display: block;
+      float: right;
+    }
+  }
+}

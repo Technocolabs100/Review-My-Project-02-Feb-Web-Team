@@ -1,0 +1,45 @@
+.sh-footer {
+  padding: 40px 15px 70px;
+  .display-flex();
+  ._flex-center();
+  &__more-btn {
+    .display-flex();
+    ._flex-center();
+    p {
+      margin-left: 30px;
+      color: #63616b;
+      display: inline;
+    }
+    span {
+      font-size: 36px;
+      &::before {
+        color: #63616b !important;
+      }
+    }
+    &-disable {
+      pointer-events: none;
+      cursor: default;
+      .opacity(0.5);
+    }
+  }
+  &__btn-add-image {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 430px;
+    justify-content: center;
+    border-width: 1px;
+    border-color: @c-gray;
+    background-color: transparent;
+    ._link-color(@c-gray);
+    i {
+      color: @c-gray !important;
+    }
+    &:hover {
+      background-color: @c-gray;
+      ._link-color(@c-white);
+      i {
+        color: @c-white !important;
+      }
+    }
+  }
+}

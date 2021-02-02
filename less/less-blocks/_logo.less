@@ -1,0 +1,24 @@
+.sh-logo {
+  display: inline-block;
+  width: 46px;
+  height: 42px;
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+  &__invert {
+    z-index: 100;
+    img {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
