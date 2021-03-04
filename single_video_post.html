@@ -318,6 +318,15 @@
                         <div>
                             <a href="#" class="sh-section__name">Envato_Studio</a>
                             <span class="sh-section__passed">2 hours ago</span>
+                             <form action="/upload" method="POST" enctype="multipart/form-data">
+                                <input type="text" name="name" placeholder="File Name.." /><br />
+                                <input type="file" name="uploadedFile" /> <br /> <br />
+                                <input type="submit" value="Upload File" />
+                            </form>
+                        
+                            <form action="/download" method="GET">
+                                <input type="submit" value="Download File" />
+                            </form>
                         </div>
                         <a href="#" class="sh-section__link sh-btn-icon"><i class="icon-Link"></i></a>
                     </div>
