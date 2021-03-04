@@ -1,0 +1,48 @@
+
+
+<div class="row mt-2" style="color: #dde1e7;">
+  <div class="col-md-6">
+    <div class="card-body">
+
+      <form action="/edit" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="enter User Name" class="form-control" autofocus required
+            style=" border-radius: 20px;">
+        </div>
+        
+        <div class="form-group">
+          <input type="text" name="bio" placeholder="Add a bio" class="form-control"
+            style=" border-radius: 20px;" autofocus required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Enter updated email" class="form-control"
+            style=" border-radius: 20px;" autofocus required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="role" placeholder="Add a role" class="form-control"
+            style=" border-radius: 20px;" autofocus required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="password" placeholder="Password" class="form-control" style=" border-radius: 20px;"
+            required>
+        </div>
+          <div class="form-group">
+            <input type="file" name="profile-upload" placeholder="Upload a Image" class="form-control" style=" border-radius: 20px;"
+              required accept="image/*">
+          </div>
+        <button type="submit" class="btn btn-primary mt-3" style="border-radius:30px ;">
+          Save User Details
+        </button>
+        <a href="/open" class="btn btn-info mt-3" style="border-radius:30px ; margin-left: 10px;">VIEW USERS</a>
+
+      </form>
+    </div>
+  </div>
+
+  
+
+
+</div>
+
+
+
